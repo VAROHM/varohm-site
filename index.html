@@ -8,8 +8,8 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
-      background-color: #000;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
     }
     .btn-gold {
       background-color: #ffd700;
@@ -20,34 +20,40 @@
       background-color: #e6c200;
       color: #000;
       transform: scale(1.03);
-      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
     .nav-link, .navbar-brand {
-      color: #ffd700 !important;
+      color: #000 !important;
       transition: all 0.3s ease;
     }
     .nav-link:hover {
       transform: scale(1.1);
     }
+    .navbar {
+      background-color: #f8f9fa !important;
+    }
     .card {
-      background-color: #111;
-      color: #ffd700;
+      background-color: #f9f9f9;
+      color: #000;
       padding: 1rem;
       border-radius: 0.5rem;
       transition: all 0.3s ease;
     }
     .card:hover {
       transform: scale(1.03);
-      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
     html {
       scroll-behavior: smooth;
+    }
+    .text-warning {
+      color: #c49b00 !important;
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-dark">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">VAROHM</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -64,7 +70,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="text-center py-5" data-aos="fade-up">
+  <section id="home" class="text-center py-5 bg-light" data-aos="fade-up">
     <img src="VAROHM FLEX.svg" alt="VAROHM Logo" width="200" class="mb-4">
     <h1>VAROHM – Daikin VRF Gateways</h1>
     <p class="lead text-warning">Revolutionizing HVAC Integration for Smarter Homes</p>
@@ -95,7 +101,7 @@
       </div>
     </div>
 
-    <h3 class="mt-5">VOHUB Advantages</h3>
+    <h3 class="mt-5 text-center">VOHUB Advantages</h3>
     <div class="row mt-3">
       <div class="col-md-4">
         <div class="card" data-aos="fade-up">
