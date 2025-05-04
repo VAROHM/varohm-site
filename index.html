@@ -49,6 +49,25 @@
     .text-warning {
       color: #c49b00 !important;
     }
+    .product-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    video.loop-animation {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 2rem auto;
+    }
+    .scalability-image {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+      margin: 2rem auto;
+    }
   </style>
 </head>
 <body>
@@ -71,7 +90,7 @@
 
   <!-- Hero Section -->
   <section id="home" class="text-center py-5 bg-light" data-aos="fade-up">
-    <img src="VAROHM FLEX.svg" alt="VAROHM Logo" width="200" class="mb-4">
+    <img src="assets/VAROHM_LOGO.png" alt="VAROHM Logo" width="200" class="mb-4">
     <h1>VAROHM – Daikin VRF Gateways</h1>
     <p class="lead text-warning">Revolutionizing HVAC Integration for Smarter Homes</p>
     <a href="#products" class="btn btn-gold mt-3">Explore Products</a>
@@ -83,40 +102,9 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card h-100" data-aos="fade-up">
+          <img src="assets/VO-VRFB-BAC0.png" alt="VO-VRFB-BAC0" class="product-image">
           <h4>VO-VRF-BAC0</h4>
           <p>VOHUB VRF BACnet/IP Bridge</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card h-100" data-aos="fade-up" data-aos-delay="100">
-          <h4>VO-VRF-KNX0</h4>
-          <p>VOHUB VRF KNX/IP Bridge</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card h-100" data-aos="fade-up" data-aos-delay="200">
-          <h4>VO-VRF-EXT</h4>
-          <p>VOHUB VRF Extend Boards</p>
-        </div>
-      </div>
-    </div>
-
-    <h3 class="mt-5 text-center">VOHUB Advantages</h3>
-    <div class="row mt-3">
-      <div class="col-md-4">
-        <div class="card" data-aos="fade-up">
-          <h5>KNX0</h5>
-          <ul>
-            <li>Works with all major KNX/IP systems</li>
-            <li>Built-in KNX Tunneling & Routing – No external gateway required</li>
-            <li>Easy integration with Control4 – No additional software required</li>
-            <li>Manage up to 64 Indoor Units – Perfect for any home size</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <h5>BAC0</h5>
           <ul>
             <li>Seamless integration with all major BMS clients via BACnet/IP</li>
             <li>Built-in BACnet Gateway for unified control</li>
@@ -125,9 +113,24 @@
           </ul>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <h5>EXT Boards</h5>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/VO-VRFB-KNX0.png" alt="VO-VRFB-KNX0" class="product-image">
+          <h4>VO-VRF-KNX0</h4>
+          <p>VOHUB VRF KNX/IP Bridge</p>
+          <ul>
+            <li>Works with all major KNX/IP systems</li>
+            <li>Built-in KNX Tunneling & Routing – No external gateway required</li>
+            <li>Easy integration with Control4 – No additional software required</li>
+            <li>Manage up to 64 Indoor Units – Perfect for any home size</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/VO-VRFB-EXT.png" alt="VO-VRFB-EXT" class="product-image">
+          <h4>VO-VRF-EXT</h4>
+          <p>VOHUB VRF Extend Boards</p>
           <ul>
             <li>Adds one HVAC communication line per board</li>
             <li>Supports up to 64 IDUs per board</li>
@@ -138,6 +141,17 @@
         </div>
       </div>
     </div>
+
+    <!-- 64 IDU Animation -->
+    <h3 class="text-center mt-5">VOHUB Managing Up to 64 Indoor Units</h3>
+    <video class="loop-animation" autoplay muted loop playsinline>
+      <source src="assets/UPTO_64.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Scalability Diagram -->
+    <h3 class="text-center mt-5">VOHUB Scalability – Control Up to 320 Devices</h3>
+    <img src="assets/VOHUB_320_DEVICES.png" alt="VOHUB Scalability" class="scalability-image">
   </section>
 
   <!-- Contact Section -->
