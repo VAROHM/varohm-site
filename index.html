@@ -20,17 +20,14 @@
       background-color: #e6c200;
       color: #000;
       transform: scale(1.03);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.2);
     }
-    .nav-link, .navbar-brand {
-      color: #000 !important;
+    .nav-link, .navbar-brand span {
+      color: #ffd700 !important;
       transition: all 0.3s ease;
     }
     .nav-link:hover {
       transform: scale(1.1);
-    }
-    .navbar {
-      background-color: #f8f9fa !important;
     }
     .card {
       background-color: #f9f9f9;
@@ -43,38 +40,22 @@
       transform: scale(1.03);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
+    .welcome-section {
+      background-color: #f2f2f2;
+    }
     html {
       scroll-behavior: smooth;
-    }
-    .text-warning {
-      color: #c49b00 !important;
-    }
-    .product-image {
-      width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-    video.loop-animation {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      display: block;
-      margin: 2rem auto;
-    }
-    .scalability-image {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      display: block;
-      margin: 2rem auto;
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">VAROHM</a>
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/VAROHM_LOGO.png" alt="VAROHM Logo" width="40" class="me-2">
+        <span class="fw-bold">VAROHM</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -89,11 +70,22 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="text-center py-5 bg-light" data-aos="fade-up">
-    <img src="assets/VAROHM_LOGO.png" alt="VAROHM Logo" width="200" class="mb-4">
+  <section id="home" class="text-center py-5" data-aos="fade-up">
     <h1>VAROHM – Daikin VRF Gateways</h1>
     <p class="lead text-warning">Revolutionizing HVAC Integration for Smarter Homes</p>
     <a href="#products" class="btn btn-gold mt-3">Explore Products</a>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-3">Welcome to VAROHM</h2>
+      <p class="lead text-center">
+        VAROHM is a proudly bootstrap company with a bold mission: to revolutionize Building Management Systems (BMS) and Home Automation technologies.
+        We are redefining what's possible by combining robust engineering with real-world integration experience. Whether it's a smart home or a large-scale commercial HVAC system,
+        VAROHM gateways deliver unparalleled flexibility, scalability, and simplicity.
+      </p>
+    </div>
   </section>
 
   <!-- Products Section -->
@@ -102,8 +94,8 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card h-100" data-aos="fade-up">
-          <img src="assets/VO-VRFB-BAC0.png" alt="VO-VRFB-BAC0" class="product-image">
-          <h4>VO-VRF-BAC0</h4>
+          <img src="assets/VO-VRFB-BAC0.png" alt="VO-VRFB-BAC0" class="img-fluid mb-3">
+          <h4>VO-VRFB-BAC0</h4>
           <p>VOHUB VRF BACnet/IP Bridge</p>
           <ul>
             <li>Seamless integration with all major BMS clients via BACnet/IP</li>
@@ -115,8 +107,8 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/VO-VRFB-KNX0.png" alt="VO-VRFB-KNX0" class="product-image">
-          <h4>VO-VRF-KNX0</h4>
+          <img src="assets/VO-VRFB-KNX0.png" alt="VO-VRFB-KNX0" class="img-fluid mb-3">
+          <h4>VO-VRFB-KNX0</h4>
           <p>VOHUB VRF KNX/IP Bridge</p>
           <ul>
             <li>Works with all major KNX/IP systems</li>
@@ -128,8 +120,8 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/VO-VRFB-EXT.png" alt="VO-VRFB-EXT" class="product-image">
-          <h4>VO-VRF-EXT</h4>
+          <img src="assets/VO-VRFB-EXT.png" alt="VO-VRFB-EXT" class="img-fluid mb-3">
+          <h4>VO-VRFB-EXT</h4>
           <p>VOHUB VRF Extend Boards</p>
           <ul>
             <li>Adds one HVAC communication line per board</li>
@@ -142,16 +134,17 @@
       </div>
     </div>
 
-    <!-- 64 IDU Animation -->
-    <h3 class="text-center mt-5">VOHUB Managing Up to 64 Indoor Units</h3>
-    <video class="loop-animation" autoplay muted loop playsinline>
-      <source src="assets/UPTO_64.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <!-- Animation Section -->
+    <div class="text-center my-5" data-aos="zoom-in">
+      <h3>Control Up to 64 Indoor Units Effortlessly</h3>
+      <video src="assets/UPTO_64.mp4" autoplay muted loop class="img-fluid mt-3" style="max-width: 100%; height: auto;"></video>
+    </div>
 
-    <!-- Scalability Diagram -->
-    <h3 class="text-center mt-5">VOHUB Scalability – Control Up to 320 Devices</h3>
-    <img src="assets/VOHUB_320_DEVICES.png" alt="VOHUB Scalability" class="scalability-image">
+    <!-- Scalability Image Section -->
+    <div class="text-center my-5" data-aos="fade-up">
+      <h3>Scalable to 320 Indoor Units Per Hub</h3>
+      <img src="assets/VOHUB_Scalability.png" alt="VOHUB Scalability" class="img-fluid mt-3">
+    </div>
   </section>
 
   <!-- Contact Section -->
